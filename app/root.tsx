@@ -15,7 +15,7 @@ import stylesheet from "~/tailwind.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  ...(cssBundleHref ? [ { rel: "stylesheet", href: cssBundleHref } ] : []),
 ];
 
 export const loader = async ({ request }: LoaderArgs) => {
@@ -31,7 +31,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
+      <body className="h-full bg-slate-800 text-neutral-100 mx-auto px-12 py-8 max-w-7xl relative min-h-screen">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
